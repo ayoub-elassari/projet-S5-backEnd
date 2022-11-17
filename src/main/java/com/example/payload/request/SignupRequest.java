@@ -99,4 +99,19 @@ public class SignupRequest {
   public void setInstagram(String instagram) {
     this.instagram = instagram;
   }
+
+  @Override
+  public String toString() {
+    return "SignupRequest{" +
+            "username='" + username + '\'' +
+            ", email='" + email + '\'' +
+            ", role=" + role +
+            ", tele='" + tele + '\'' +
+            ", ville='" + ville + '\'' +
+            ", sport='" + sport + '\'' +
+            ", facebook='" + facebook + '\'' +
+            ", instagram='" + instagram + '\'' +
+            ", password='" + password + '\'' +
+            '}';
+  }
 }

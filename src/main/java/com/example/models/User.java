@@ -54,6 +54,12 @@ public class User {
     this.username = username;
     this.email = email;
     this.password = password;
+    this.tele = tele;
+    this.ville= ville;
+    this.sport= sport;
+    this.facebook= facebook;
+    this.instagram= instagram;
+
   }
 
   public Long getId() {
@@ -134,5 +140,21 @@ public class User {
 
   public void setInstagram(String instagram) {
     this.instagram = instagram;
+  }
+
+  @Override
+  public String toString() {
+    return "User{" +
+            "id=" + id +
+            ", username='" + username + '\'' +
+            ", email='" + email + '\'' +
+            ", password='" + password + '\'' +
+            ", tele='" + tele + '\'' +
+            ", ville='" + ville + '\'' +
+            ", sport='" + sport + '\'' +
+            ", facebook='" + facebook + '\'' +
+            ", instagram='" + instagram + '\'' +
+            ", roles=" + roles +
+            '}';
   }
 }
