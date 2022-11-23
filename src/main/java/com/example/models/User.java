@@ -1,10 +1,14 @@
 package com.example.models;
 
+
+import com.example.posts.models.Post;
+
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -45,6 +49,17 @@ public class User {
         joinColumns = @JoinColumn(name = "user_id"), 
         inverseJoinColumns = @JoinColumn(name = "role_id"))
   private Set<Role> roles = new HashSet<>();
+
+  @OneToMany(fetch = FetchType.EAGER, mappedBy = "userCreatPost")
+  private List<Post> posts;
+
+//
+//  @OneToMany( mappedBy = "userComment")
+//  private List<Comments> comments;
+//
+//  @OneToMany(mappedBy = "userLike")
+//  private List<Likes> likes;
+
 
   public User() {
   }
