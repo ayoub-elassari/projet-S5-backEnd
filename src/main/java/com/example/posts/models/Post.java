@@ -1,6 +1,7 @@
 package com.example.posts.models;
 
 import com.example.models.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,9 +23,11 @@ public class Post {
     @ManyToOne()
     private User userCreatPost;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "post")
+    @JsonIgnore
+    @OneToMany(mappedBy = "post")
     private List<Comments> comments;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "postLike")
     private List<Likes> likes;
 }

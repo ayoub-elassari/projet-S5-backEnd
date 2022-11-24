@@ -8,6 +8,8 @@ import com.example.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PostService {
     @Autowired
@@ -28,5 +30,10 @@ public class PostService {
         comments.setUserComment(userRepository.findById(id_user).get());
         comments.setPost(postRepository.findById(id_post).get());
         return commentsRepository.save(comments);
+    }
+
+
+    public List<Post> getAll() {
+        return postRepository.findAll();
     }
 }

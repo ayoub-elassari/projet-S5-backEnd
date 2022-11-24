@@ -6,6 +6,8 @@ import com.example.posts.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @CrossOrigin(origins = "http://localhost:3000/", maxAge = 3600)
 @RestController
 @RequestMapping("/post")
@@ -16,6 +18,11 @@ public class PostController {
     @PostMapping("/add/{id_user}")
     public Post addPost(@RequestBody Post post, @PathVariable Long id_user){
         return postService.addPost(id_user ,post);
+    }
+
+    @GetMapping("/get")
+    public List<Post> getPost(){
+        return postService.getAll();
     }
 
     @PostMapping("/comment/{id_user}/{id_post}")
