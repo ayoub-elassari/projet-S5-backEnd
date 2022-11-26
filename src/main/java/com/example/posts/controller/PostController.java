@@ -30,4 +30,9 @@ public class PostController {
         return postService.addCommentToPost(comments ,id_user, id_post);
     }
 
+    @GetMapping("/comments/{id_post}")
+    public List<Comments> getAllComments(@PathVariable Long id_post){
+        return postService.getAllComments(id_post);
+    }
+
 }

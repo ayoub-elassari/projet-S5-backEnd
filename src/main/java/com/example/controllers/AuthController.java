@@ -65,7 +65,7 @@ public class AuthController {
                          userDetails.getEmail(),
                          roles,
                           userDetails.getTele(),
-                          userDetails.getTele(),
+                          userDetails.getVille(),
                           userDetails.getSport(),
                           userDetails.getFacebook(),
                           userDetails.getInstagram()));

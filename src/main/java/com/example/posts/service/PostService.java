@@ -36,4 +36,11 @@ public class PostService {
     public List<Post> getAll() {
         return postRepository.findAll();
     }
+
+    public List<Comments> getAllComments(Long id_post) {
+        Post post = postRepository.findById(id_post).get();
+        return commentsRepository.findByPost(post);
+//        return commentsRepository.findAll();
+    }
+
 }

@@ -20,6 +20,7 @@ public class Post {
     private String title;
     private String question;
 
+
     @ManyToOne()
     private User userCreatPost;
 
