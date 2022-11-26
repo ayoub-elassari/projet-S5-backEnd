@@ -63,7 +63,7 @@ public class UserDetailsImpl implements UserDetails {
             user.getTele(),
             user.getVille(), user.getSport(),
             user.getFacebook(),
-            user.getInstagram(), 
+            user.getInstagram(),
         authorities);
   }
 
