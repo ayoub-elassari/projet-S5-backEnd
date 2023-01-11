@@ -34,5 +34,8 @@ public class PostController {
     public List<Comments> getAllComments(@PathVariable Long id_post){
         return postService.getAllComments(id_post);
     }
-
+    @DeleteMapping("/Post/{id_post}")
+    public void deletePost(@PathVariable Long id_post){
+        postService.DeletePost(id_post);
+    }
 }

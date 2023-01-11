@@ -42,5 +42,8 @@ public class PostService {
         return commentsRepository.findByPost(post);
 //        return commentsRepository.findAll();
     }
+    public void DeletePost(Long id){
+        postRepository.deleteById(id);
+    }
 
 }

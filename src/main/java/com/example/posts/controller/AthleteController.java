@@ -17,8 +17,6 @@ public class AthleteController {
     @GetMapping("/athletes/{city}")
     public List<User> getAthlete(@PathVariable String city){
         return userDetailsService.getAthlete(city);
-
-
     }
 }
 
