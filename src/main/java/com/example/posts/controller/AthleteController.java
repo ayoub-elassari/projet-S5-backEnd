@@ -18,6 +18,11 @@ public class AthleteController {
     public List<User> getAthlete(@PathVariable String city){
         return userDetailsService.getAthlete(city);
     }
+
+    @GetMapping("/athletes")
+    public List<User> getAllAthletes(){
+        return userDetailsService.getAllAtheles();
+    }
 }
 
 

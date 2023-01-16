@@ -28,4 +28,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
   public List<User> getAthlete(String ville) {
     return userRepository.findByVille(ville);
   }
+
+  public List<User> getAllAtheles(){
+    return userRepository.findAll();
+  }
 }
